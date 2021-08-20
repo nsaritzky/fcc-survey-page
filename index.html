@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,54 +7,71 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <script src="/live.js"></script>
+        <!-- <script src="/live.js"></script> -->
+        <link rel="stylesheet" href="/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.gstatic.com" crossorigin rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
         <!-- Place favicon.ico in the root directory -->
 
     </head>
     <body>
-        <h1 id="title">A Short Survey for your Enjoyment</h1>
-        <p id="description">What you think of this survey?</p>
-        <form id="survey-form">
-            <label for="name" id="name-label">Name</label>
-            <input id="name" type="text" placeholder="Name" required/>
-            <label for="email" id="email-label">Email</label>
-            <input id="email" type="email" placeholder="Email" required/>
-            <label for="number" id="number-label">Bitcoin Price</label>
-            <input type="number" id="number" placeholder="0" min="1" max="100000">
-            <label for="maiden-name">Mother's maiden name
-                <select id="dropdown" name="maiden-name">
-                    <option selected disabled>Select an option</option>
-                    <option value="Haven">Haven</option>
-                    <option value="Newhaven">Newhaven</option>
-                    <option value="Bartelhaven">Bartelhaven</option>
-                    <option value="Other">Other</option>
-                </select>
-            </label>
-            <div>
-                <p>Would you recommend this survey to a rival?</p>
-                <label for="rival-recommend">
-                    <input name="rival-recommend" type="radio" value="Yes"/>Yes
-                </label>
-                <label for="rival-recommend">
-                    <input name="rival-recommend" type="radio" value="No"/>No
-                </label>
-                <label>
-                    <input name="rival-recommend" type="radio" value="I am without equal"/>I am without equal
-                </label>
-            </div>
-            <div>
-                <p>Check all that apply</p>
-                <label for="hungry"><input name="check-all" type="checkbox" value="Hungry" id="hungry"/>Hungry</label>
-                <label for="idle"><input name="check-all" type="checkbox" value="Idle" id="idle"/>Idle</label>
-                <label for="prespicacious"><input name="check-all" type="checkbox" value="Prespicacious" id="prespicacious"/>Prespicacious</label>
-                <label for="sleepy"><input name="check-all" type="checkbox" value="Sleepy" id="sleepy"/>Sleepy</label>
-            </div>
-            <div>
-                <textarea cols="30" id="" name="" rows="10"></textarea>
-            </div>
-            <button type="submit" id="submit">Submit</button>
-        </form>
+        <div class="container">
+            <header>
+                <h1 id="title">A Short Survey for your Enjoyment</h1>
+                <p id="description">What do you think of this survey?</p>
+            </header>
+            <form id="survey-form">
+                <div class="input-box">
+                    <label for="name" id="name-label">Name</label>
+                    <input id="name" type="text" placeholder="Name" required class="input"/>
+                </div>
+                <div class="input-box">
+                    <label for="email" id="email-label">Email</label>
+                    <input id="email" type="email" placeholder="Email" required class="input"/>
+                </div>
+                <div class="input-box">
+                    <label for="number" id="number-label">Bitcoin Price</label>
+                    <input type="number" id="number" placeholder="0" min="1" max="100000" class="input">
+                </div>
+                <div class="input-box">
+                    <label for="maiden-name">Mother's maiden name</label>
+                    <select id="dropdown" name="maiden-name" class="input">
+                        <option selected disabled value>Select an option</option>
+                        <option value="Haven">Haven</option>
+                        <option value="Newhaven">Newhaven</option>
+                        <option value="Bartelhaven">Bartelhaven</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <p>Would you recommend this survey to a rival?</p>
+                    <label for="rival-recommend">
+                        <input name="rival-recommend" type="radio" value="Yes"/>Yes
+                    </label>
+                    <label for="rival-recommend">
+                        <input name="rival-recommend" type="radio" value="No"/>No
+                    </label>
+                    <label>
+                        <input name="rival-recommend" type="radio" value="I am without equal"/>I am without equal
+                    </label>
+                </div>
+                <div class="input-box">
+                    <p>Check all that apply</p>
+                    <label for="hungry"><input name="check-all" type="checkbox" value="Hungry" id="hungry"/>Hungry</label>
+                    <label for="idle"><input name="check-all" type="checkbox" value="Idle" id="idle"/>Idle</label>
+                    <label for="prespicacious"><input name="check-all" type="checkbox" value="Prespicacious" id="prespicacious"/>Prespicacious</label>
+                    <label for="sleepy"><input name="check-all" type="checkbox" value="Sleepy" id="sleepy"/>Sleepy</label>
+                </div>
+                <div class="input-box">
+                    <label for="suggestions">What favorite part of this suvey, and why?</label>
+                    <textarea name="suggestions" cols="30" id="suggestions" name="" rows="10" placeholder="Write here" class="input"></textarea>
+                </div>
+                <div class="input-box">
+                    <button class="input" type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
 
 
     </body>
